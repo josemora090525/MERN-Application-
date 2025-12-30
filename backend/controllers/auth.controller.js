@@ -135,6 +135,14 @@ export const refreshToken = async (req, res) => {
     }
 };
 
+export const getProfile = async (req, res) => {
+    try{
+        res.json(req.user);
+    }catch(error){
+        res.status(500).json({message: "Server error", error: error.message});
+    }
+}
+
 
 
 //accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTRkOWE3MjNmMThlYjIwOTMzZWU0ZjMiLCJpYXQiOjE3NjY2OTQ3OTMsImV4cCI6MTc2NjY5NTY5M30.ih1lHsQt-oe0Oi2rAxMKHCYueRngRMSQtUT25c6P1lE; Path=/; HttpOnly; Expires=Thu, 25 Dec 2025 20:48:13 GMT;
