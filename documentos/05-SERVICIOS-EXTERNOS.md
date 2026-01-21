@@ -34,7 +34,7 @@ mongodb+srv://<usuario>:<contrasena>@<cluster>.mongodb.net/<nombre_db>?retryWrit
 
 En el archivo `.env`:
 ```
-MONGO_URI=mongodb+srv://usuario:contrasena@cluster.mongodb.net/mern-ecommerce
+MONGO_URI=<TU_URI_DE_MONGODB>
 ```
 
 ### Codigo de conexion (lib/db.js)
@@ -92,7 +92,7 @@ Upstash es un servicio de Redis en la nube que ofrece:
 ### Variable de entorno
 
 ```
-UPSTASH_REDIS_URL=redis://default:xxxxxxxxxx@us1-xxxxxx-xxxxx.upstash.io:6379
+UPSTASH_REDIS_URL=<TU_URL_DE_REDIS>
 ```
 
 ### Codigo de conexion (lib/redis.js)
@@ -166,9 +166,9 @@ En lugar de almacenar imagenes en el servidor o en MongoDB (lo cual seria inefic
 ### Variables de entorno
 
 ```
-CLOUDINARY_CLOUD_NAME=tu-cloud-name
-CLOUDINARY_API_KEY=123456789012345
-CLOUDINARY_API_SECRET=abcdefghijklmnopqrstuvwxyz
+CLOUDINARY_CLOUD_NAME=<TU_CLOUD_NAME>
+CLOUDINARY_API_KEY=<TU_API_KEY>
+CLOUDINARY_API_SECRET=<TU_API_SECRET>
 ```
 
 ### Codigo de configuracion (lib/cloudinary.js)
@@ -241,8 +241,8 @@ Stripe es una plataforma de pagos que permite:
 ### Variables de entorno
 
 ```
-STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxxxxxx
-STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxx
+STRIPE_SECRET_KEY=<TU_STRIPE_SECRET_KEY>
+STRIPE_PUBLISHABLE_KEY=<TU_STRIPE_PUBLISHABLE_KEY>
 ```
 
 ### Codigo de configuracion (lib/stripe.js)
@@ -353,23 +353,23 @@ El archivo `.env` almacena configuraciones sensibles que no deben subirse al rep
 PORT=4000
 
 # MongoDB
-MONGO_URI=mongodb+srv://usuario:contrasena@cluster.mongodb.net/mern-ecommerce
+MONGO_URI=<TU_URI_DE_MONGODB>
 
 # Redis
-UPSTASH_REDIS_URL=redis://default:xxx@xxx.upstash.io:6379
+UPSTASH_REDIS_URL=<TU_URL_DE_REDIS>
 
 # JWT
-ACCESS_TOKEN_SECRET=tu-clave-secreta-access-token
-REFRESH_TOKEN_SECRET=tu-clave-secreta-refresh-token
+ACCESS_TOKEN_SECRET=<TU_CLAVE_SECRETA>
+REFRESH_TOKEN_SECRET=<TU_CLAVE_SECRETA>
 
 # Cloudinary
-CLOUDINARY_CLOUD_NAME=tu-cloud-name
-CLOUDINARY_API_KEY=123456789
-CLOUDINARY_API_SECRET=abc123xyz
+CLOUDINARY_CLOUD_NAME=<TU_CLOUD_NAME>
+CLOUDINARY_API_KEY=<TU_API_KEY>
+CLOUDINARY_API_SECRET=<TU_API_SECRET>
 
 # Stripe
-STRIPE_SECRET_KEY=sk_test_xxx
-STRIPE_PUBLISHABLE_KEY=pk_test_xxx
+STRIPE_SECRET_KEY=<TU_STRIPE_SECRET_KEY>
+STRIPE_PUBLISHABLE_KEY=<TU_STRIPE_PUBLISHABLE_KEY>
 
 # Cliente
 CLIENT_URL=http://localhost:5175
